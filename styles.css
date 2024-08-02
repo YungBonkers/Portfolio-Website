@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -53,12 +54,14 @@ footer {
     bottom: 0;
 }
 
+/* Side Images */
 .side-image.left {
     position: absolute;
     width: 400px; /* Fixed width */
     height: auto;
     top: 55%;
     transform: translateY(-50%);
+    left: 0;
 }
 
 .side-image.right {
@@ -67,13 +70,15 @@ footer {
     height: auto;
     top: 55%;
     transform: translateY(-50%);
-}
-.side-image.left {
-    left: 0;
+    right: 0;
 }
 
-.side-image.right {
-    right: 0;
+/* Styles for Larger Screens (Desktops, Tablets) */
+@media (min-width: 769px) {
+    body {
+        padding-left: 400px; /* Adjust padding based on left side image width */
+        padding-right: 325px; /* Adjust padding based on right side image width */
+    }
 }
 
 /* Mobile Styles (Smartphones) */
