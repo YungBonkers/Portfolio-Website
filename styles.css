@@ -109,9 +109,9 @@ nav ul li a {
     .side-image {
         display: block;
         width: 10%; /* Resize images relative to the screen width */
-        max-width: 150px; /* Prevents images from getting too large */
+       
         height: auto;
-        position: absolute;
+        position: fixed;
         top: 50%;
         transform: translateY(-50%);
     }
