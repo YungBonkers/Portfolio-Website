@@ -80,11 +80,12 @@ footer {
 @media (max-width: 768px) {
     .side-image {
         position: relative; /* Change position to relative */
-        width: 80%; /* Constrain the width to 80% of the container */
-        max-width: 300px; /* Set a maximum width */
+        width: 100%; /* Ensure the image takes up the full width of its container */
+        max-width: 300px; /* Set a maximum width to control the size */
         height: auto;
-        max-height: 200px; /* Limit the height to prevent covering content */
-        margin: 10px auto; /* Center the image and add vertical margins */
+        max-height: 200px; /* Set a maximum height */
+        object-fit: contain; /* Ensure the image fits within the defined height/width */
+        margin: 20px auto; /* Center the image and add vertical margins */
         display: block; /* Ensure images are visible */
     }
 
