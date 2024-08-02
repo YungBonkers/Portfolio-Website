@@ -78,13 +78,18 @@ footer {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-    .side-image {
-        display: none; /* Hide side images on small screens */
+   .side-image {
+        position: relative; /* Change position to relative */
+        width: 100%; /* Ensure images are responsive */
+        height: auto;
+        margin: 10px 0; /* Add margin to separate from other content */
     }
 
-    body {
-        padding: 10px; /* Ensure padding around the content */
+    .side-image.left,
+    .side-image.right {
+        display: block; /* Ensure images are visible */
     }
+}
 
     header, section, footer {
         padding: 15px;
