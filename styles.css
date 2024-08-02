@@ -111,7 +111,7 @@ nav ul li a {
         width: 15vw; /* Resize images relative to the screen width */
         max-width: 400px; /* Prevents images from getting too large */
         min-width: 200px; /* Ensures images are not too small */
-        position: fixed; /* Fix the position to the sides of the viewport */
+        position: absolute; /* Fix the position to the sides of the viewport */
     }
 
     body {
