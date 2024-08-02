@@ -108,7 +108,7 @@ nav ul li a {
 @media (min-width: 769px) {
     .side-image {
         display: block;
-        width: 10%; /* Resize images relative to the screen width */
+        width: 50%; /* Resize images relative to the screen width */
        
         height: auto;
         position: fixed;
