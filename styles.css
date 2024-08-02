@@ -109,17 +109,16 @@ nav ul li a {
     .side-image {
         display: block;
         width: 10%; /* Resize images relative to the screen width */
-        height: auto;
         max-width: 150px; /* Prevents images from getting too large */
-        min-width: 100px; /* Ensures images are not too small */
-        position: fixed; /* Fix the position to the sides of the viewport */
+        height: auto;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    
-
     body {
-        padding-left: 30vw; /* Adjust based on the size of the side images */
-        padding-right: 30vw;
+        padding-left: 12%;
+        padding-right: 12%;
         padding-bottom: 100px;
     }
 }
