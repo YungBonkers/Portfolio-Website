@@ -53,10 +53,12 @@ nav ul li a {
 
 /* Side Images */
 .side-image {
-    position: absolute; /* Keep position absolute */
+    position: absolute;
+    width: 100%; /* Full width of container */
+    max-width: 150px; /* Max width to prevent giant images */
+    height: auto;
     top: 50%;
     transform: translateY(-50%);
-    height: auto;
 }
 
 .side-image.left {
