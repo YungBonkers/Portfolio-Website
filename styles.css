@@ -8,11 +8,6 @@ body {
     color: #494141;
 }
 
-/* Ensure side images are hidden on mobile */
-.side-image {
-    display: none;
-}
-
 /* Header, Section, and Footer Styles */
 header {
     background-color: #333;
@@ -56,8 +51,30 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Side Images */
+.side-image {
+    position: absolute;
+    width: 100%; /* Full width of container */
+    max-width: 150px; /* Max width to prevent giant images */
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.side-image.left {
+    left: 0;
+}
+
+.side-image.right {
+    right: 0;
+}
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+    .side-image {
+        display: none; /* Hide side images on small screens */
+    }
+
     body {
         padding: 10px; /* Ensure padding around the content */
     }
@@ -93,20 +110,12 @@ nav ul li a {
 @media (min-width: 769px) {
     .side-image {
         display: block;
-        position: absolute;
-        width: 10%;
-        max-width: 150px;
+        width: 10%; /* Resize images relative to the screen width */
+        max-width: 150px; /* Prevents images from getting too large */
         height: auto;
+        position: fixed;
         top: 50%;
         transform: translateY(-50%);
-    }
-
-    .side-image.left {
-        left: 0;
-    }
-
-    .side-image.right {
-        right: 0;
     }
 
     body {
