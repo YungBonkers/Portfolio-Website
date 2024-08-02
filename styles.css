@@ -80,13 +80,10 @@ footer {
 @media (max-width: 768px) {
    .side-image {
         position: relative; /* Change position to relative */
-        width: 50%; /* Ensure images are responsive */
+        width: 80%; /* Ensure images are responsive */
+        max-width: 300px;
         height: auto;
-        margin: 10px 0; /* Add margin to separate from other content */
-    }
-
-    .side-image.left,
-    .side-image.right {
+        margin: 10px auto; /* Add margin to separate from other content */
         display: block; /* Ensure images are visible */
     }
 
