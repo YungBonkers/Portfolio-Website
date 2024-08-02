@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px; /* Adjust the value as needed */
+    background-color: #912f2f;
+    color: #494141;
+    padding-left: 0px; /* Adjust based on side image width */
+    padding-right: 0px; /* Adjust based on side image width */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff; /* Changed to white for better contrast */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.side-image.left {
+    position: absolute;
+    width: 400px; /* Fixed width */
+    height: auto;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.side-image.right {
+    position: absolute;
+    width: 325px; /* Fixed width */
+    height: auto;
+    top: 55%;
+    transform: translateY(-50%);
+}
+.side-image.left {
+    left: 0;
+}
+
+.side-image.right {
+    right: 0;
+}
+
+/* Optional media queries for very small screens */
+@media (max-width: 480px) {
+    body {
+        padding-left: 100px; /* Adjust padding if necessary */
+        padding-right: 100px;
+    }
+
+    .side-image {
+        width: 100px; /* Smaller fixed size for very small screens */
+    }
+}
