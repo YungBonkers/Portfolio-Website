@@ -110,17 +110,14 @@ nav ul li a {
 @media (min-width: 769px) {
     .side-image {
         display: block;
-        width: 10%; /* Resize images relative to the screen width */
-        max-width: 150px; /* Prevents images from getting too large */
-        height: auto;
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 15vw; /* 15% of the viewport width */
+        max-width: 400px; /* Prevents images from getting too large */
+        min-width: 200px; /* Ensures images are not too small */
     }
 
     body {
-        padding-left: 12%;
-        padding-right: 12%;
+        padding-left: 18vw; /* Adjust based on the size of the side images */
+        padding-right: 18vw;
         padding-bottom: 100px;
     }
 }
