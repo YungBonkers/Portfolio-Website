@@ -53,12 +53,10 @@ nav ul li a {
 
 /* Side Images */
 .side-image {
-    position: absolute;
-    width: 100%; /* Full width of container */
-    max-width: 150px; /* Max width to prevent giant images */
-    height: auto;
+    position: absolute; /* Keep position absolute */
     top: 50%;
     transform: translateY(-50%);
+    height: auto;
 }
 
 .side-image.left {
@@ -110,9 +108,10 @@ nav ul li a {
 @media (min-width: 769px) {
     .side-image {
         display: block;
-        width: 15vw; /* 15% of the viewport width */
+        width: 15vw; /* Resize images relative to the screen width */
         max-width: 400px; /* Prevents images from getting too large */
         min-width: 200px; /* Ensures images are not too small */
+        position: fixed; /* Fix the position to the sides of the viewport */
     }
 
     body {
