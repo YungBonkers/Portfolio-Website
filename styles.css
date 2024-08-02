@@ -1,38 +1,19 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-bottom: 100px; /* Adjust the value as needed */
     background-color: #912f2f;
     color: #494141;
-    padding-left: 0px; /* Adjust based on side image width */
-    padding-right: 0px; /* Adjust based on side image width */
 }
 
+/* Header, Section, and Footer Styles */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff; /* Changed to white for better contrast */
-    text-decoration: none;
-    font-weight: bold;
 }
 
 section {
@@ -45,29 +26,41 @@ section {
 
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 20px;
 }
 
-.side-image.left {
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Side Images */
+.side-image {
     position: absolute;
-    width: 400px; /* Fixed width */
+    width: 100%; /* Full width of container */
+    max-width: 150px; /* Max width to prevent giant images */
     height: auto;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
-.side-image.right {
-    position: absolute;
-    width: 325px; /* Fixed width */
-    height: auto;
-    top: 55%;
-    transform: translateY(-50%);
-}
 .side-image.left {
     left: 0;
 }
@@ -76,39 +69,58 @@ footer {
     right: 0;
 }
 
-/* Mobile Styles (Smartphones) */
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .side-image {
         display: none; /* Hide side images on small screens */
     }
-    
+
     body {
-        padding-left: 5%; /* Ensure content is centered */
-        padding-right: 5%;
+        padding: 10px; /* Ensure padding around the content */
     }
 
     header, section, footer {
-        padding: 10px;
+        padding: 15px;
         margin: 0;
+        max-width: 100%; /* Ensure full width on mobile */
+        box-shadow: none; /* Remove shadow for simplicity on mobile */
     }
 
     h1, h2, h3 {
-        font-size: 1.5em; /* Adjust font sizes for smaller screens */
+        font-size: 1.4em; /* Adjust font sizes for smaller screens */
     }
 
     nav ul {
-        display: flex;
         flex-direction: column;
-        padding: 0;
+        align-items: center;
     }
 
     nav ul li {
         display: block;
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
     footer {
-        position: relative; /* Ensure footer is at the bottom of the content */
+        position: relative; /* Ensure the footer is at the bottom of the content */
         margin-top: 20px;
+    }
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 769px) {
+    .side-image {
+        display: block;
+        width: 10%; /* Resize images relative to the screen width */
+        max-width: 150px; /* Prevents images from getting too large */
+        height: auto;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    body {
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-bottom: 100px;
     }
 }
