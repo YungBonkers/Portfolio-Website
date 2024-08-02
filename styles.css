@@ -111,7 +111,7 @@ nav ul li a {
         width: 50%; /* Resize images relative to the screen width */
        
         height: auto;
-        position: fixed;
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
     }
