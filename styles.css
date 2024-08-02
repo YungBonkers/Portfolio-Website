@@ -76,10 +76,38 @@ footer {
     right: 0;
 }
 
+
+.left-mobile-image {
+    display: none; /* Hidden by default */
+    max-width: 100%;
+    height: auto;
+}
+
+.right-mobile-image {
+    display: none; /* Hidden by default */
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .side-image {
         display: none; /* Hide side images on small screens */
+    }
+
+     .right-mobile-image {
+        display: block; /* Show the mobile-specific image */
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0; /* Adjust margins for mobile view */
+    }
+
+     .left-mobile-image {
+        display: block; /* Show the mobile-specific image */
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0; /* Adjust margins for mobile view */
     }
 
     body {
