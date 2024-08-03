@@ -82,20 +82,6 @@ footer {
         display: none; /* Hide side images on small screens */
     }
 
-     .right-mobile-image {
-        display: block; /* Show the mobile-specific image */
-        max-width: 100%;
-        height: auto;
-        margin: 10px 0; /* Adjust margins for mobile view */
-    }
-
-     .left-mobile-image {
-        display: block; /* Show the mobile-specific image */
-        max-width: 100%;
-        height: auto;
-        margin: 10px 0; /* Adjust margins for mobile view */
-    }
-
     body {
         padding: 10px; /* Ensure padding around the content */
     }
