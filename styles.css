@@ -76,60 +76,48 @@ footer {
     right: 0;
 }
 
-/* Media Queries for Mobile Devices */
+* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .side-image {
-        position: relative !important; /* Change position to relative */
-        width: 100% !important; /* Ensure the image takes up the full width of its container */
-        max-width: 300px !important; /* Set a maximum width to control the size */
-        height: auto !important;
-        max-height: 200px !important; /* Set a maximum height */
-        object-fit: contain !important; /* Ensure the image fits within the defined height/width */
-        margin: 10px 0 !important; /* Add vertical margins to separate the images */
-        display: block !important; /* Ensure images are visible */
+        display: none; /* Hide side images on small screens */
     }
 
-    /* Adjust the layout to prevent images from stacking in the center */
-    .side-image.left {
-        float: left; /* Align left image to the left */
-        margin-right: 10px; /* Add margin to the right to separate from other content */
+     .right-mobile-image {
+        display: block; /* Show the mobile-specific image */
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0; /* Adjust margins for mobile view */
     }
 
-    .side-image.right {
-        float: right; /* Align right image to the right */
-        margin-left: 10px; /* Add margin to the left to separate from other content */
+     .left-mobile-image {
+        display: block; /* Show the mobile-specific image */
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0; /* Adjust margins for mobile view */
     }
 
-    /* Ensure content is not covered by images */
-    section#about {
-        margin-top: 20px !important; /* Add space between image and content */
-        clear: both; /* Ensure content clears floated images */
+    body {
+        padding: 10px; /* Ensure padding around the content */
     }
-}
-
     header, section, footer {
         padding: 15px;
         margin: 0;
         max-width: 100%; /* Ensure full width on mobile */
         box-shadow: none; /* Remove shadow for simplicity on mobile */
     }
-
     h1, h2, h3 {
         font-size: 1.4em; /* Adjust font sizes for smaller screens */
     }
-
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-
     nav ul li {
         display: block;
         margin: 10px 0;
     }
-
     footer {
         position: relative; /* Ensure the footer is at the bottom of the content */
         margin-top: 20px;
     }
-
+}
