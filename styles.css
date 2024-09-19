@@ -4,7 +4,10 @@ body {
     margin: 0;
     padding: 0;
     padding-bottom: 100px; /* Adjust the value as needed */
-    background-color: #912f2f;
+    background-image: url('images/background.jpg'); /* Path to your image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #494141;
     padding-left: 0px; /* Adjust based on side image width */
     padding-right: 0px; /* Adjust based on side image width */
