@@ -79,6 +79,11 @@ footer {
     right: 0;
 }
 
+.images_Home{
+    border: 5px solid #4b4c4d;
+    border-radius: 15px; 
+}
+
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .side-image {
