@@ -1,0 +1,148 @@
+<!-- Jared Strickland -->
+<!-- Lab7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet">
+    <!-- Client ID is secure -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AeIliqslRf4RztA48EA1T96iqIIESJDmxr9UUDtnWEc6vdoyGu10Sb_lc_hpv3jEAxcPKlGSI5KN1dgp"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <header>
+                <div class="heading">Jared Strickland<br>
+                    Ethical Hacker | Gamer | IT Professional 
+                </div>
+            </header>
+            <hr>
+        </div>
+        
+        <div class="content">
+            <nav class="w3-top">
+                <div class="w3-bar w3-grey">
+                    <a class="w3-bar-item w3-button" href="index.html">HOME</a>
+                    <a class="w3-bar-item w3-button" href="interests.html">INTERESTS</a>
+                    <a class="w3-bar-item w3-button w3-indigo" href="donate.html">DONATE</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button">ABOUT</button>
+                        <div class="w3-dropdown-content w3-var-block w3-card-4">
+                            <a class="w3-bar-item w3-button" href="about.html">ABOUT</a>
+                            <a class="w3-bar-item w3-button" href="resume.html">RESUME</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="home_page_left_image_container">
+                <img class="w3-circle w3-hover-grayscale" src="images/left-image.jpg" alt="Left Side Image King Jared" />
+            </div>
+            <div class="home_page_right_image_container">
+                <img class="w3-circle w3-hover-grayscale" src="images/right-image.jpg" alt="Right Side Image Jared at Six Flags" />
+            </div>
+        </div>
+
+        <hr>
+        
+        <main>
+            <h1>Donate</h1>
+            <h3>You can give me money here:</h3>
+           
+            <div id="donateForm" class="w3-container"> 
+                <div class="w3-card-5 w3-light-grey w3-padding-large donate-card">
+                    <form id="donation-form" onsubmit="return validateForm()">
+                        <label for="fname">First Name:</label>
+                        <input class="w3-input" type="text" id="fname" required>
+                        <br>
+                        
+                        <label for="lname">Last Name:</label>
+                        <input class="w3-input" type="text" id="lname" required>
+                        <br>
+                        
+                        <label for="email">Email:</label>
+                        <input class="w3-input" type="email" id="email" required>
+                        <br>
+                        
+                        <label for="amount">Donation Amount:</label>
+                        <input class="w3-input" type="number" id="amount" min="0" required>
+                        <br>
+                        
+                        <div id="paypal-button-container"></div>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                function validateForm() {
+                    const fname = document.getElementById('fname').value;
+                    const lname = document.getElementById('lname').value;
+                    const email = document.getElementById('email').value;
+                    const amount = document.getElementById('amount').value;
+
+                    // Basic input validation
+                    if (!fname || !lname || !email || amount <= 0) {
+                        alert('Please fill in all fields correctly.');
+                        return false;
+                    }
+
+                    // Improved email validation
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email)) {
+                        alert("Please enter a valid email address.");
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                // Render the PayPal button
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        const amount = document.getElementById('amount').value;
+
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: amount
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('Transaction completed by ' + details.payer.name.given_name);
+                            // Optionally, you can send the donation details to your server here
+                            // const fname = document.getElementById('fname').value;
+                            // const lname = document.getElementById('lname').value;
+                            // const email = document.getElementById('email').value;
+                            // Send to your server with fetch or XMLHttpRequest
+                        });
+                    },
+                    onError: function(err) {
+                        console.error(err);
+                        alert('An error occurred during the transaction. Please try again and fill in all boxes of the form.');
+                    }
+                }).render('#paypal-button-container'); // Display the PayPal button
+            </script>
+
+        </main>
+        
+        <div class="footer">
+            <footer>
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:jared1198@live.com">jared1198@live.com</a></p>
+                <p>Cell: 678-477-8150</p>
+                <p>LinkedIn: 
+                    <a href="https://www.linkedin.com/in/jared-strickland-5b4495114" target="_blank" class="fa fa-linkedin" aria-label="Home of LinkedIn"></a>
+                </p>
+                <p>&copy; 2023</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
