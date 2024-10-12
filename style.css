@@ -159,23 +159,41 @@ ul.noBullet li a:hover {
     font-style: italic;
 }
 
-.home_page_right_image_container img {
-    height: 450px;
-    width: 350px;
-    float: right;
-    margin-left: 350px;
-    margin-top: 80px;
-	margin: 100px 100px;
+/* Style the image containers */
+.home_page_left_image_container, 
+.home_page_right_image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%; /* Adjust this as needed */
+    margin: 0 auto; /* Center the images horizontally */
+    padding: 10px; /* Optional padding */
 }
 
-.home_page_left_image_container img {
-    height: 450px;
-    width: 350px;
-    float: left;
-    margin-left: 250px;
-    margin-top: 80px;
-	margin: 100px 250px;
+/* Ensure the images are responsive */
+.home_page_left_image_container img, 
+.home_page_right_image_container img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* You can adjust the max size of the image */
 }
+
+/* For larger screens */
+@media screen and (min-width: 1200px) {
+    .home_page_left_image_container, 
+    .home_page_right_image_container {
+        max-width: 40%; /* Reduce the width on larger screens */
+    }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+    .home_page_left_image_container, 
+    .home_page_right_image_container {
+        max-width: 100%; /* Allow full-width on smaller screens */
+    }
+}
+
 
 .interest_photo img{
 	height: 500px; 
