@@ -165,9 +165,10 @@ ul.noBullet li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%; /* Adjust this as needed */
-    margin: 0 auto; /* Center the images horizontally */
-    padding: 10px; /* Optional padding */
+    max-width: 50%;
+    margin: 0 auto; 
+    padding: 10px; 
+	padding-left: 130px;
 }
 
 /* Ensure the images are responsive */
@@ -175,14 +176,14 @@ ul.noBullet li a:hover {
 .home_page_right_image_container img {
     width: 100%;
     height: auto;
-    max-width: 300px; /* You can adjust the max size of the image */
+    max-width: 300px; 
 }
 
 /* For larger screens */
 @media screen and (min-width: 1200px) {
     .home_page_left_image_container, 
     .home_page_right_image_container {
-        max-width: 40%; /* Reduce the width on larger screens */
+        max-width: 40%; 
     }
 }
 
@@ -190,7 +191,7 @@ ul.noBullet li a:hover {
 @media screen and (max-width: 768px) {
     .home_page_left_image_container, 
     .home_page_right_image_container {
-        max-width: 100%; /* Allow full-width on smaller screens */
+        max-width: 100%; 
     }
 }
 
