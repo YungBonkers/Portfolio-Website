@@ -1,5 +1,5 @@
 /* Jared Strickland */
-/* Lab6 */
+/* Portfolio */
 /* #cc3b3b, #ffffff, #848484, #645f5f, #d76363 */
 
 .wrapper {
@@ -365,13 +365,13 @@ ul.noBullet li a:hover {
 }
 
 .heading {
-	font-famnily: 'Times New Roman', Times, serif;
+	font-family: 'Times New Roman', Times, serif;
 	font-size: 3vh;
 	font-weight: bold;
 }
 
 h1, h2 {
-	font-famnily: 'Times New Roman', Times, serif;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -403,4 +403,29 @@ h1, h2 {
 
 table {
     border-collapse: collapse;
+}
+
+.unityprojectspic img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust size */
+}
+
+@media (max-width: 768px) {
+    .unityprojectspic img {
+        max-width: 200px; /* Scales down for mobile */
+    }
+}
+
+.unityprojectspic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.unityprojectspic img {
+    display: block;
+    margin: 0 auto;
 }
